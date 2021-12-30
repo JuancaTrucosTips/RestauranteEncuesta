@@ -23,6 +23,7 @@ import com.ejemplo.encuesta.dto.EncuestaDto;
 import com.ejemplo.encuesta.entity.Encuesta;
 import com.ejemplo.encuesta.entity.OpcionRespuesta;
 import com.ejemplo.encuesta.entity.Pregunta;
+import com.ejemplo.encuesta.entity.TipoPregunta;
 
 @ExtendWith(MockitoExtension.class)
 class EncuestaServicesImplTest {
@@ -100,7 +101,11 @@ class EncuestaServicesImplTest {
 		var encuestaDto = new EncuestaDto();
 		encuestaDto.setDescripcion("Encuesta para clientes recurrentes");
 
+		var tipoPregunta = new TipoPregunta();
+		tipoPregunta.setId(1);
+		
 		var pregunta1 = new Pregunta();
+		pregunta1.setTipoPregunta(tipoPregunta);
 		pregunta1.setEnunciado("¿enunciado1?");
 		
 		var opcionRespuesta1 = new OpcionRespuesta();
