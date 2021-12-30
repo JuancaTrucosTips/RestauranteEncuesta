@@ -25,12 +25,15 @@ mas abajo dejo la colección de postman con su body para consumir el servicio y 
 
 # Instalación de la base de datos
 Dentro del proyecto **en resourses** hay una carpeta llamada **sql** donde vas a encontrar el archivo **encuesta-restaurante.sql**, este contiene la creación de la base de datos, el usuario, los permisos para el usuario, las tablas y unos insert de datos iniciales.
+[encuesta-restaurante.sql](https://github.com/JuancaTrucosTips/RestauranteEncuesta/blob/master/src/main/resources/sql/encuesta-restaurante.sql)
 
 # Modelo Entidad Relacion
 Dentro del proyecto **en resourses** hay una carpeta llamada **sql** donde vas a encontrar la **imagen del modelo llamada EntidadRelacionEncuesta.png**
+[EntidadRelacionEncuesta](https://github.com/JuancaTrucosTips/RestauranteEncuesta/blob/master/src/main/resources/sql/EntidadRelacionEncuestas.png)
 
 # Colección en POSTMAN
 Dentro del proyecto **en resourses hay una carpeta llamada postman_collection** donde vas a encontrar el **archivo json** llamado **RestauranteEncuestas.postman_collection** para **importar en POSTMAN** y usar los servicios expuestos.
+[EntidadRelacionEncuesta](https://github.com/JuancaTrucosTips/RestauranteEncuesta/tree/master/src/main/resources/postman_collection)
 
 # Cobertura
 94%
