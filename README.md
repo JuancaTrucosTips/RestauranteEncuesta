@@ -1,7 +1,7 @@
 # Servicio de Encuestas para Restaurante
 Prueba Tecnica RobinFood
 
-Utilizando el framework de **Spring Boot con Java 11** se realiza una **API Rest** para un restaurante que requiere un sistema que permita listar una encuesta a sus clientes para recibir el feedback de sus servicios; la encuesta debe de tener un listado de preguntas de tipo abiertas y selección múltiple con sus respectivas respuestas.
+Utilizando el framework de **Spring Boot con Java 11** y usando **Maven** se realiza una **API Rest** para un restaurante que requiere un sistema que permita listar una encuesta a sus clientes para recibir el feedback de sus servicios; la encuesta debe de tener un listado de preguntas de tipo abiertas y selección múltiple con sus respectivas respuestas.
 
 Se Implementan los test unitarios con **Junit 5**
 (No implementar ningún tipo de seguridad)
