@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "97682ac3-2f7a-45aa-82d2-d119afa3ca0b",
+		"name": "RestauranteEncuestas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar Todas Las Encuestas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/api/encuestas/",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"encuestas",
+						""
+					]
+				},
+				"description": "Puedes visualizas todo el listado de encuestas disponibles"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Encuesta por Identificador",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/api/encuestas/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"encuestas",
+						"1"
+					]
+				},
+				"description": "Listar encuesta por identificador"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Encuesta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "string",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"descripcion\": \"Encuesta Clientes burguers\",\n    \"preguntas\": [\n        {\n            \"enunciado\": \"¿Que tipo de queso te gusta para la Hamburguesa?\",\n            \"tipoPregunta\": {\n                \"id\": 1,\n                \"descripcion\": \"Opción Multiple\"\n            },\n            \"opcionRespuestas\": [\n                {\n                    \"texto\": \"Azul\"\n                },\n                {\n                    \"texto\": \"Mozzarella\"\n                },\n                {\n                    \"texto\": \"Queso duro\"\n                }\n            ]\n        },\n        {\n            \"enunciado\": \"¿Escribe tu experiencia hoy en el punto de venta?\",\n            \"tipoPregunta\": {\n                \"id\": 2,\n                \"descripcion\": \"Abierta\"\n            },\n            \"opcionRespuestas\": []\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/api/encuestas",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"encuestas"
+					]
+				},
+				"description": "Crear una encuesta con sus respectivas preguntas"
+			},
+			"response": []
+		},
+		{
+			"name": "Responder Encuesta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"idEncuesta\": 1,\n  \"idCliente\": 3,\n  \"preguntas\": [\n    {\n      \"idPregunta\": 1,\n      \"respuestas\": {\n        \"opcionRespuestas\": [\n          {\n            \"idOpcionRespuesta\": 2\n          },\n          {\n            \"idOpcionRespuesta\": 3\n          }\n        ],\n        \"respuestaAbierta\": null\n      }\n    },\n    {\n      \"idPregunta\": 2,\n      \"respuestas\": {\n        \"opcionRespuestas\": [],\n        \"respuestaAbierta\": \"Muy amables todos en el punto de venta\"\n      }\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/api/solucionEncuestas",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"solucionEncuestas"
+					]
+				},
+				"description": "Sirve para responder la encuesta de un cliente"
+			},
+			"response": []
+		}
+	]
+}
