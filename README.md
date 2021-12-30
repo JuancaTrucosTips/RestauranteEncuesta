@@ -39,4 +39,4 @@ Dentro del proyecto **en resourses hay una carpeta llamada postman_collection** 
 94%
 
 # Sonar
-Se usa el plugin SonarLint para ayudar a mejorar el código.
+Se usa el plugin SonarLint para evaluar el código.
